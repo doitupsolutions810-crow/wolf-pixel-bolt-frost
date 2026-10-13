@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --bg: #07080c;
+  --ink: #e7ecf3;
+  --dim: #8b97a8;
+  --line: #243041;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+}
+
+#root,
+body {
+  min-height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
+}

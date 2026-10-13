@@ -1,0 +1,74 @@
+{
+  "generation": 20,
+  "zero_mode": -0.16796875467020145,
+  "residual_energy": 0.10602057790572929,
+  "global_best_score": 11.024626222587075,
+  "clan_bests": {
+    "Symmetry": {
+      "score": 11.024626222587075,
+      "status": "CARRIER",
+      "id": "Sym-2-oracle_aligner-9"
+    },
+    "Spectral": {
+      "score": 10.748333252481395,
+      "status": "CARRIER",
+      "id": "Spe-1-oracle_aligner-19"
+    },
+    "Continuous": {
+      "score": 10.566186737109373,
+      "status": "CARRIER",
+      "id": "Con-5-oracle_aligner-18"
+    },
+    "Meta": {
+      "score": 10.821019355340303,
+      "status": "CARRIER",
+      "id": "Met-4-oracle_aligner-19"
+    },
+    "Residual": {
+      "score": 10.166787019660186,
+      "status": "CARRIER",
+      "id": "Res-4-oracle_aligner-17"
+    },
+    "Positivity": {
+      "score": 10.383784240653092,
+      "status": "CARRIER",
+      "id": "Pos-1-deep_mutator-20"
+    },
+    "Network": {
+      "score": 10.418615885451894,
+      "status": "CARRIER",
+      "id": "Net-0-oracle_aligner-16"
+    }
+  },
+  "top3": [
+    {
+      "id": "Sym-2-oracle_aligner-9",
+      "clan": "Symmetry",
+      "score": 11.024626222587075,
+      "status": "CARRIER"
+    },
+    {
+      "id": "Met-4-oracle_aligner-19",
+      "clan": "Meta",
+      "score": 10.821019355340303,
+      "status": "CARRIER"
+    },
+    {
+      "id": "Spe-1-oracle_aligner-19",
+      "clan": "Spectral",
+      "score": 10.748333252481395,
+      "status": "CARRIER"
+    }
+  ],
+  "trace": [
+    "Met-1 \u2192 [sub]deep_mutator score=6.102",
+    "Met-3 \u2192 [sub]deep_mutator score=7.754",
+    "Pos-1 \u2192 [sub]deep_mutator score=10.384",
+    "Pos-2 \u2192 [sub]deep_mutator score=6.559",
+    "Pos-3 \u2192 [sub]oracle_aligner score=9.461",
+    "Pos-5 \u2192 [sub]explorer score=2.456",
+    "Pos-6 \u2192 [sub]explorer score=3.053",
+    "Net-0 \u2192 [sub]explorer score=2.375"
+  ],
+  "timestamp": 1791545865.2209861
+}
