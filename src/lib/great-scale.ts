@@ -2,14 +2,15 @@
 
 export const MODULUS = 9;
 
-/** f(x) = 9 - (x mod 9). f∘f = id on the circle. */
+/** Canonical representative of f(x) = -x (mod 9), returned in [0, 9). */
 export function involution(x: number): number {
   const m = ((x % MODULUS) + MODULUS) % MODULUS;
-  return MODULUS - m;
+  return (MODULUS - m) % MODULUS;
 }
 
-/** Unique fixed point in [0, 9): f(x)=x ⇒ x = 4.5. */
+/** The reflection has two fixed classes on the circle: 0 and MODULUS / 2. */
 export const FIXED_POINT = 4.5;
+export const CIRCLE_FIXED_POINTS = [0, FIXED_POINT] as const;
 
 export function pairing(): Array<[number, number]> {
   return [
@@ -17,7 +18,7 @@ export function pairing(): Array<[number, number]> {
     [2, 7],
     [3, 6],
     [4, 5],
-    [0, 9],
+    [0, 0],
   ];
 }
 
@@ -95,7 +96,7 @@ export function scaleImage(m: number, mNext: number): { from: number; to: number
 /** One map on the unit circle. Independent of modulus. */
 export function unitInvolution(u: number): number {
   const frac = ((u % 1) + 1) % 1;
-  return 1 - frac;
+  return (1 - frac) % 1;
 }
 
 /** Max disagreement between f_m(x)/m and g(x/m) over a sample. */
@@ -134,7 +135,7 @@ export function projectToCarrier(u: number): number {
 
 function involutionOn(x: number, mod: number): number {
   const m = ((x % mod) + mod) % mod;
-  return mod - m;
+  return (mod - m) % mod;
 }
 
 export const DESCENTS = [
