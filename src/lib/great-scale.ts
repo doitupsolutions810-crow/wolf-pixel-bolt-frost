@@ -152,6 +152,7 @@ export const DESCENTS = [
   { id: "LXXIII", name: "Scale-free involution" },
   { id: "LXXIV", name: "Parity of the residual" },
   { id: "LXXV", name: "Exact projector" },
+  { id: "XCI", name: "Quotient-circle fixed-point audit" },
 ] as const;
 
 export function formatSci(n: number, digits = 4): string {
