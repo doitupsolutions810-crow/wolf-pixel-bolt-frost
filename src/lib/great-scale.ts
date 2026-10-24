@@ -153,6 +153,9 @@ export const DESCENTS = [
   { id: "LXXIV", name: "Parity of the residual" },
   { id: "LXXV", name: "Exact projector" },
   { id: "XCI", name: "Quotient-circle fixed-point audit" },
+  { id: "XCII", name: "Stable QWZ spinor normalization" },
+  { id: "XCIII", name: "QGT scale covariance" },
+  { id: "XCIV", name: "QGT positivity tolerance diagnostics" },
 ] as const;
 
 export function formatSci(n: number, digits = 4): string {
