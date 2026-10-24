@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {
   CIRCLE_FIXED_POINTS,
+  DESCENTS,
   FIXED_POINT,
   MODULUS,
   grainAgreement,
@@ -49,4 +50,13 @@ test("integer pairing uses canonical representatives rather than duplicate endpo
 
 test("normalized grain agreement remains zero after canonicalization", () => {
   assert.ok(grainAgreement() < 1e-12);
+});
+
+test("quantum-geometric numerical descents are registered in Great Scale", () => {
+  assert.deepEqual(DESCENTS.slice(-4), [
+    { id: "XCI", name: "Quotient-circle fixed-point audit" },
+    { id: "XCII", name: "Stable QWZ spinor normalization" },
+    { id: "XCIII", name: "QGT scale covariance" },
+    { id: "XCIV", name: "QGT positivity tolerance diagnostics" },
+  ]);
 });
